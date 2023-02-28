@@ -1,0 +1,220 @@
+$header: #ec755d;
+$white: #ffffff;
+$graph-background: #fffbf6;
+$heading: #382314;
+$day: #92857a;
+
+main {
+  padding: 4.188em 1em;
+}
+
+.header {
+  background: $header;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25em 1.5em 1.375em 1.25em;
+
+  &__balance {
+    font-weight: 400;
+    font-size: 0.938rem;
+    line-height: 1.25rem;
+    color: $white;
+  }
+
+  &__total {
+    margin-block-start: 0.25rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.938rem;
+    color: $white;
+  }
+
+  h1 {
+    width: 3.75rem;
+    height: 2.5rem;
+  }
+
+  &__logo {
+    width: 3.75rem;
+    height: 2.5rem;
+  }
+}
+
+.graph {
+  margin-block-start: 1rem;
+  background: $graph-background;
+  border-radius: 0.625rem;
+  padding: 1.5rem 1.25rem;
+
+  &__heading {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.938rem;
+    color: $heading;
+  }
+
+  &__days {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 2px solid #f8e9dd;
+    padding-block-end: 1.5rem;
+    margin-block-start: 57px;
+  }
+
+  &__day {
+    min-width: 33px;
+
+    .popup {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 23px;
+      color: #fffbf6;
+      background: #382314;
+      border-radius: 5px;
+      padding: 8px 8px 9px 8px;
+    }
+    &__text {
+      font-weight: 400;
+      font-size: 0.75rem;
+      line-height: 1rem;
+      text-align: center;
+      color: $day;
+    }
+
+    &__bar {
+      background: #ec755d;
+      border-radius: 5px;
+      margin-block-end: 11px;
+    }
+  }
+
+  .footer {
+    margin-block-start: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+      font-weight: 400;
+      font-size: 0.938rem;
+      line-height: 1.25rem;
+      text-align: right;
+      color: $day;
+    }
+
+    &__total__number {
+      margin-block-start: 4px;
+      font-weight: 700;
+      font-size: 1.875rem;
+      line-height: 2.438rem;
+      color: $heading;
+    }
+
+    &__percentage {
+      margin-block-start: 1.438rem;
+      &__number {
+        font-weight: 700;
+        font-size: 0.938rem;
+        line-height: 1.25rem;
+        text-align: right;
+        color: $heading;
+      }
+    }
+  }
+}
+
+@media (min-width: 75em) {
+  main {
+    padding: 11.375rem 28.125rem;
+  }
+
+  .header {
+    padding: 1.688rem 2.438rem 1.563rem 2rem;
+
+    &__balance {
+      font-size: 1.125rem;
+      line-height: 1.438rem;
+    }
+
+    &__total {
+      margin-block-start: 0.5rem;
+      font-size: 2rem;
+      line-height: 2.625rem;
+    }
+
+    h1 {
+      width: 4.5rem;
+      height: 3rem;
+    }
+
+    &__logo {
+      width: 4.5rem;
+      height: 3rem;
+    }
+  }
+
+  .graph {
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
+
+    &__heading {
+      font-size: 2rem;
+      line-height: 2.625rem;
+    }
+
+    &__days {
+      padding-block-end: 2rem;
+      margin-block-start: 66px;
+    }
+
+    &__day {
+      font-size: 0.938rem;
+      line-height: 1.25rem;
+      min-width: 50px;
+      display: flex;
+      flex-direction: column;
+
+      &__text {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      &__bar {
+        margin-block-end: 8px;
+        max-width: 50px;
+        justify-self: center;
+        margin-block-start: 8px;
+      }
+    }
+
+    .footer {
+      margin-block-start: 2rem;
+
+      &__text {
+        font-size: 18px;
+        line-height: 23px;
+      }
+
+      &__total {
+        &__text {
+          text-align: left;
+        }
+      }
+
+      &__total__number {
+        margin-block-start: 1px;
+        font-size: 48px;
+        line-height: 62px;
+      }
+
+      &__percentage {
+        margin-block-start: 31px;
+        &__number {
+          font-size: 18px;
+          line-height: 23px;
+        }
+      }
+    }
+  }
+}
