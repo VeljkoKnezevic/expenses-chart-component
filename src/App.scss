@@ -80,7 +80,7 @@ main {
 
       &--active {
         display: block;
-        margin-top: -2.125rem;
+        margin-block-start: -2.125rem;
       }
     }
     &__text {
@@ -103,7 +103,16 @@ main {
       }
 
       &--active {
-        margin: 0 0.313rem;
+        margin-inline-start: 0.563rem;
+        margin-inline-end: 0.313rem;
+      }
+
+      &--max {
+        background-color: #76b5bc;
+
+        &:hover {
+          background-color: #b4e0e5;
+        }
       }
     }
   }
@@ -203,10 +212,10 @@ main {
       &__popup {
         font-size: 1.125rem;
         line-height: 1.438rem;
-        padding-inline-start: 0.5em 0.5em 0.563em 0.5em;
+        padding: 0.5em 0.5em 0.563em 0.5em;
 
         &--active {
-          margin-top: -2.625rem;
+          margin-block-start: -2.625rem;
         }
       }
 
