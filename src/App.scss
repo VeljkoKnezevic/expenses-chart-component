@@ -167,6 +167,7 @@ main {
 
   .header {
     padding: 1.688rem 2.438rem 1.563rem 2rem;
+    border-radius: 1.25rem;
 
     &__balance {
       font-size: 1.125rem;
@@ -192,6 +193,7 @@ main {
 
   .graph {
     padding: 2rem 2.5rem 2.5rem 2.5rem;
+    margin-block-start: 1.563rem;
 
     &__heading {
       font-size: 2rem;
