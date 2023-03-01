@@ -4,6 +4,14 @@ import { useEffect, useState } from "react";
 import days from "../data.json";
 
 function App() {
+  const handleClick = (e) => {
+    const popup = e.target.parentElement.children[0];
+    const bar = e.target;
+
+    popup.classList.toggle("graph__day__popup--active");
+    bar.classList.toggle("graph__day__bar--active");
+  };
+
   return (
     <main className="App">
       <div className="header">
@@ -19,12 +27,14 @@ function App() {
         <h2 className="graph__heading">Spending - Last 7 days</h2>
         <div className="graph__days">
           {days.map((day) => {
+            const onePixel = 0.349;
             return (
               <div className="graph__day" key={day.day}>
+                <div className="graph__day__popup">${day.amount}</div>
                 <div
                   className="graph__day__bar"
-                  style={{ height: day.amount / 0.349 }}
-                  // onClick={Skontati}
+                  style={{ height: day.amount / onePixel }}
+                  onClick={handleClick}
                 ></div>
                 <p className="graph__day__text">{day.day}</p>
               </div>

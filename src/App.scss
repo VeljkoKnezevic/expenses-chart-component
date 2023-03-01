@@ -61,20 +61,27 @@ main {
     justify-content: space-between;
     border-bottom: 2px solid #f8e9dd;
     padding-block-end: 1.5rem;
-    margin-block-start: 57px;
+    margin-block-start: 3.563rem;
   }
 
   &__day {
-    min-width: 33px;
+    min-width: 2.063rem;
 
-    .popup {
+    &__popup {
       font-weight: 700;
-      font-size: 18px;
-      line-height: 23px;
+      font-size: 0.813rem;
+      line-height: 1.125rem;
       color: #fffbf6;
       background: #382314;
-      border-radius: 5px;
-      padding: 8px 8px 9px 8px;
+      border-radius: 0.313rem;
+      padding: 0.313em 0.313em 0.375em 0.313em;
+      display: none;
+      margin-block-end: 0.313rem;
+
+      &--active {
+        display: block;
+        margin-top: -2.125rem;
+      }
     }
     &__text {
       font-weight: 400;
@@ -86,8 +93,18 @@ main {
 
     &__bar {
       background: #ec755d;
-      border-radius: 5px;
-      margin-block-end: 11px;
+      border-radius: 0.313rem;
+      margin-block-end: 0.688rem;
+      max-width: 2.063rem;
+
+      &:hover {
+        cursor: pointer;
+        background: #ff9b86;
+      }
+
+      &--active {
+        margin: 0 0.313rem;
+      }
     }
   }
 
@@ -105,7 +122,7 @@ main {
     }
 
     &__total__number {
-      margin-block-start: 4px;
+      margin-block-start: 0.25rem;
       font-weight: 700;
       font-size: 1.875rem;
       line-height: 2.438rem;
@@ -126,8 +143,17 @@ main {
 }
 
 @media (min-width: 75em) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
   main {
-    padding: 11.375rem 28.125rem;
+    min-width: 572px;
+    max-width: 572px;
   }
 
   .header {
@@ -165,26 +191,35 @@ main {
 
     &__days {
       padding-block-end: 2rem;
-      margin-block-start: 66px;
+      margin-block-start: 4.125rem;
     }
 
     &__day {
       font-size: 0.938rem;
       line-height: 1.25rem;
-      min-width: 50px;
       display: flex;
       flex-direction: column;
 
+      &__popup {
+        font-size: 1.125rem;
+        line-height: 1.438rem;
+        padding-inline-start: 0.5em 0.5em 0.563em 0.5em;
+
+        &--active {
+          margin-top: -2.625rem;
+        }
+      }
+
       &__text {
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 0.938rem;
+        line-height: 1.25rem;
       }
 
       &__bar {
-        margin-block-end: 8px;
-        max-width: 50px;
+        margin-block-end: 0.5rem;
         justify-self: center;
-        margin-block-start: 8px;
+        margin-block-start: 0.5rem;
+        min-width: 3.125rem;
       }
     }
 
@@ -192,8 +227,8 @@ main {
       margin-block-start: 2rem;
 
       &__text {
-        font-size: 18px;
-        line-height: 23px;
+        font-size: 1.125rem;
+        line-height: 1.438rem;
       }
 
       &__total {
@@ -203,16 +238,16 @@ main {
       }
 
       &__total__number {
-        margin-block-start: 1px;
-        font-size: 48px;
-        line-height: 62px;
+        margin-block-start: 0.063rem;
+        font-size: 3rem;
+        line-height: 3.875rem;
       }
 
       &__percentage {
-        margin-block-start: 31px;
+        margin-block-start: 1.938rem;
         &__number {
-          font-size: 18px;
-          line-height: 23px;
+          font-size: 1.125rem;
+          line-height: 1.438rem;
         }
       }
     }
